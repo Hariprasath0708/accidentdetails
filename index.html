@@ -50,18 +50,15 @@
     console.log("Time of Accident: " + time);
     console.log("Location: " + location);
     console.log("Description: " + description);
-    let accident={date,time,location,description};
+    
     // Add your code here to process the collected data
-  }function (submitAccidentDetails){
+     let a = date +'/'+time+'/'+location+'/'+description;
         window.parent.postMessage(
-            JSON.stringify({
-              event_code: "ym-client-event",
-            
-               data:accident,
-              
-            }),
-            "*"
-          );
-         // alert(`${ratingValue} saved`);
-    }
+       JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: a
+               }),
+                "*"
+           );  
+  }
 </script>
